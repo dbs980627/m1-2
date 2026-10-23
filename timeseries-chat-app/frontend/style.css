@@ -1,0 +1,31 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,"Noto Sans KR",sans-serif;background:#f4f6fb;color:#1f2937}
+header{background:#1e3a8a;color:#fff;padding:12px 20px}
+h1{margin:0;font-size:20px}h2{margin:0 0 10px;font-size:16px}
+main{display:grid;grid-template-columns:300px 1fr;gap:16px;padding:16px;max-width:1200px;margin:auto}
+aside{display:flex;flex-direction:column;gap:16px}
+#data{grid-column:1/-1}
+.card{background:#fff;border-radius:10px;padding:14px;box-shadow:0 1px 4px #0001}
+.notice{background:#fef3c7;padding:8px 20px;text-align:center;font-size:14px}
+button{background:#2563eb;color:#fff;border:0;border-radius:6px;padding:8px 12px;cursor:pointer}
+button.danger{background:#dc2626}button.sub{background:#6b7280}
+input{padding:8px;border:1px solid #d1d5db;border-radius:6px;min-width:0}
+#messages{height:340px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;padding:8px;background:#f9fafb;border-radius:8px}
+.msg{max-width:80%;padding:8px 12px;border-radius:12px;white-space:pre-wrap;line-height:1.5}
+.msg.user{align-self:flex-end;background:#2563eb;color:#fff}
+.msg.assistant{align-self:flex-start;background:#e5e7eb}
+#loading{color:#6b7280;font-size:14px;margin:6px 0}
+#chat-form,#data-form{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+#chat-input{flex:1}
+#conv-list{list-style:none;padding:0;margin:10px 0 0;max-height:220px;overflow:auto}
+#conv-list li{display:flex;gap:6px;align-items:center;padding:6px;border-radius:6px;cursor:pointer}
+#conv-list li:hover,#conv-list li.active{background:#e0e7ff}
+#conv-list span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px}
+#summary dl{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;margin:0;font-size:14px}
+#summary dt{color:#6b7280}#summary dd{margin:0}
+.table-wrap{max-height:300px;overflow:auto;margin-top:10px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:6px;border-bottom:1px solid #e5e7eb;text-align:left}
+.status{font-size:13px;margin-top:6px;min-height:18px}
+.status.ok{color:#059669}.status.err{color:#dc2626}
+@media(max-width:800px){main{grid-template-columns:1fr}}

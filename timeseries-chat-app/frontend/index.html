@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>데이터 기반 AI 채팅</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>📈 데이터 기반 AI 채팅</h1></header>
+  <div id="notice" class="notice" hidden>서버를 깨우는 중입니다. 무료 서버라 첫 요청은 최대 1분 걸릴 수 있어요…</div>
+  <main>
+    <aside>
+      <section class="card">
+        <h2>데이터 요약</h2>
+        <div id="summary">불러오는 중…</div>
+      </section>
+      <section class="card">
+        <h2>대화 기록</h2>
+        <button id="new-chat">+ 새 대화</button>
+        <ul id="conv-list"></ul>
+      </section>
+    </aside>
+
+    <section class="card" id="chat">
+      <h2>채팅</h2>
+      <div id="messages"></div>
+      <div id="loading" hidden>답변 생성 중…</div>
+      <form id="chat-form">
+        <input id="chat-input" placeholder="예: 최근 추세는 어때?" maxlength="1000" autocomplete="off" required>
+        <button>전송</button>
+      </form>
+    </section>
+
+    <section class="card" id="data">
+      <h2>데이터 관리</h2>
+      <form id="data-form">
+        <input type="hidden" id="data-id">
+        <input type="date" id="data-date" required>
+        <input type="number" step="any" id="data-value" placeholder="값" required>
+        <input id="data-memo" placeholder="메모" maxlength="200">
+        <button id="data-submit">추가</button>
+        <button type="button" id="data-cancel" hidden>취소</button>
+      </form>
+      <div id="data-status" class="status"></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>날짜</th><th>값</th><th>메모</th><th></th></tr></thead>
+          <tbody id="data-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
